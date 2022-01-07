@@ -1,0 +1,9 @@
+version : '3.8'
+
+services:
+  realfront:
+    #l imagine existe dans le hub 
+    # image : adinou59/maapp: si dans hub
+    build: .
+    container_name: weather
+  
