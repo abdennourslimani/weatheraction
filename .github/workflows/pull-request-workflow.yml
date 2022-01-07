@@ -1,7 +1,5 @@
 name: pull request workflow
 on:
-  realese:
-    type: [published]
   pull_request:
     branches:
       - main
