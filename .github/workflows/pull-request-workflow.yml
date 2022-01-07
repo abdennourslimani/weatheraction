@@ -1,6 +1,8 @@
-name: Node.js CI
+name: pull request workflow
 on:
-  push:
+  pull_request:
+    branches:
+      - main
 jobs:
   test-unitaire:
     runs-on: ubuntu-latest
