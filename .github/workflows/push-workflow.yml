@@ -1,11 +1,9 @@
 name: push workflow
 on:
   push:
-
-
 jobs:
-  job_1:
-    test-unitaire:
+  test-unitaire:
+    name: test and build 
     runs-on: ubuntu-latest
     strategy:
       matrix:
