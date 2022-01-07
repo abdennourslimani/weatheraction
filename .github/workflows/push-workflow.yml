@@ -22,7 +22,7 @@ jobs:
         with:
           name: code-coverage-report
           path: output/test/code-coverage.html
-        name: list of outpout
+      - name: list of outpout
         uses: ls
       - name: Download a single artifact
         uses: actions/download-artifact@v2
