@@ -1,8 +1,9 @@
-name: Node.js CI
+name: push workflow
 on:
   push:
 jobs:
   test-unitaire:
+    name: test and build 
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -17,3 +18,16 @@ jobs:
         run: npm ci
       - run: npm run build --if-present
       - run: npm test
+      - uses: actions/upload-artifact@v2
+        with: 
+          name: test-unitaire
+          path: ./reports/awesome-reports
+      - name: J'effectue les tests de coverage
+        run: npm run cover
+      - uses: actions/upload-artifact@v2
+        with: 
+          name: coverage
+          path: ./reports/coverage
+####
+  
+      
